@@ -1,0 +1,21 @@
+.pageNotFound{
+    padding: 20px 20px 20px 20px;
+    margin: 10px 10% 10px 10%;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.pageNotFoundTitle{
+
+}
+
+.pageNotFoundText{
+
+}
+
+@media only screen and (max-width: 576px) {
+    .pageNotFound{
+        margin: 10px 2% 10px 2%;
+    }
+}

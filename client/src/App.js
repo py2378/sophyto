@@ -1,28 +1,23 @@
-import { useForm } from "react-hook-form";
-export default function App() {
-    const { register, handleSubmit } = useForm();
-    async function onSubmit(e) {
-        // When a post request is sent to the creation url, we'll add a new record to the database.
-        await fetch("http://localhost:5000/test", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(e),
-        })
-            .catch(error => {
-                window.alert(error);
-                return;
-            });
+import { Routes, Route } from 'react-router-dom';
+import Layout from "./Components/Layout/Layout";
+import Echanger from "./Views/Echanger";
+import Home from "./Views/Home";
+import NotFound from "./Views/NotFound";
+import News from "./Views/News";
+import Events from "./Views/Events";
 
-    }
-    const onError = (errors, e) => console.log(errors, e);
-
+function App() {
     return (
-        <form onSubmit={handleSubmit(onSubmit, onError)}>
-            <input {...register("firstName")} />
-            <input {...register("lastName")} />
-            <button type="submit">Submit</button>
-        </form>
+        <Layout>
+            <Routes>
+                <Route exact path={'/'} element={<Home/>}/>
+                <Route exact path={'/echanger'} element={<Echanger/>}/>
+                <Route exact path={'/events'} element={<Events/>}/>
+                <Route exact path={'/articles'} element={<News/>}/>
+                <Route exact path={'*'} element={<NotFound/>}/>
+            </Routes>
+        </Layout>
     );
 }
+
+export default App;

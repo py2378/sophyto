@@ -1,0 +1,87 @@
+:root{
+    --primary-orange:#ee7038;
+    --primary-light-orange: rgba(252, 171, 100, 0.25);
+    --primary-medium-orange: rgba(252, 171, 100, 0.5);
+    --primary-dark-blue: rgba(0, 52, 58, 0.5);
+    --primary-map-purple:#0811DF;
+    --primary-map-mauve: rgba(8, 17, 223, 0.3);
+    --primary-map-pink: rgba(124, 13, 152, 0.4);
+    --primary-map-green: rgba(205, 61, 156, 0.4);
+    --primary-map-gray:#CDD4D9;
+    --primary-light-gray:#BFC6C7;
+    --primary-middle-gray:#7F8D8F;
+    --primary-dark-gray:#00343A;
+    --primary-white: #FFFFFF;
+}
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    src: local('Nunito'), url("fonts/Nunito-VariableFont_wght.ttf") format('truetype');
+}
+
+div#App{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Nunito';
+    text-decoration: none;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,p{
+    font-family: 'Nunito';
+    text-decoration: none;
+    color: var(--primary-dark-gray);
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    margin: 0;
+}
+
+h1{
+    color: var(--primary-dark-gray);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.bg-blue{
+    background:
+            linear-gradient(0deg, rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)),
+            radial-gradient(81.56% 246.19% at 92.87% 83.33%, #0F9EAF 0%, rgba(149, 212, 220, 0.557292) 47.89%, #0F9EAF 100%);
+}
+
+.rounded-card-white{
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.rounded-card-white img{
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.scaleTransitionImage{
+    transition: transform .2s;
+}
+
+.scaleTransitionImage:hover{
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 576px){
+
+}
