@@ -5,14 +5,12 @@ function ArticleItem(props){
     let {title, date, url, link, content, textButton} = props;
 
     return(
-        <div className={'col-md-6 articleItem'}>
-            <a href={link}>
-                <img
-                    className={'articleImage'}
-                    src={url}
-                    alt={title}
-                />
-            </a>
+        <div className={'articleItem'}>
+            <img
+                className={'articleImage'}
+                src={url}
+                alt={title}
+            />
             <h5>{date}</h5>
             <h3>{title}</h3>
             <p>{content}</p>

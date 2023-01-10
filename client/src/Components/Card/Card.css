@@ -10,11 +10,8 @@
 
 #echanger .card{
     text-align: center;
-    border-radius: 2em;
     background: #FFFFFF;
-}
-
-#echanger .card-top{
+    border-radius: 2em;
 }
 
 #echanger .card-bottom{
@@ -28,7 +25,8 @@
 #echanger img{
     margin: 0;
     width: 100%;
-    border-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
 }
 
 #echanger .card a{
