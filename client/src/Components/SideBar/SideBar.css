@@ -1,0 +1,81 @@
+#sideBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0em 1em;
+    width: 20%;
+
+    /* WHITE */
+    background: #FFFFFF;
+}
+
+#sidebar-search, #sidebar-filter, #sidebar-legende{
+    margin: 8% 0;
+}
+
+#sideBar hr{
+    width: 100%;
+    border: solid var(--primary-light-gray) 0.1em;
+    border-radius: 0.3em;
+}
+
+/* SEARCH */
+form#sidebar-search  div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+#sidebar-search input{
+    font-size: 1em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: var(--primary-light-gray);
+    border-radius: 0.2em;
+    outline: transparent;
+    width: 80%;
+    padding: 0.7em 0.5em;
+}
+
+#sidebar-search input::placeholder{
+    color: var(--primary-dark-gray);
+    opacity: 1;
+    text-align: left;
+}
+
+#sidebar-search button{
+    border: none;
+    background: none;
+}
+
+/* FILTER */
+#sidebar-filter{
+
+}
+
+/* LEGENDE */
+#sidebar-legende li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    gap: 10%;
+    padding: 5% 0;
+}
+
+#sidebar-legende li svg{
+    width: 25%;
+}
+
+#sidebar-legende li label{
+    width: 75%;
+}
+
+#sidebar-legende h3{
+    margin: 0;
+ }
+
