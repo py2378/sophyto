@@ -1,0 +1,42 @@
+#echanger{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    gap: 8em;
+    padding: 10em;
+}
+
+#echanger .card{
+    text-align: center;
+    border-radius: 2em;
+    background: #FFFFFF;
+}
+
+#echanger .card-top{
+}
+
+#echanger .card-bottom{
+    height: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#echanger img{
+    margin: 0;
+    width: 100%;
+    border-radius: 2em;
+}
+
+#echanger .card a{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5em 6em;
+    background: #FFFFFF;
+    border: 0.1em solid var(--primary-medium-orange);
+    border-radius: 0.2em;
+    color: var(--primary-orange);
+}
