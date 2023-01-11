@@ -1,25 +1,66 @@
-img.articleImage{
-    max-height: 20em;
+.articles-page{
+    margin: 0 10%;
     text-align: center;
 }
 
-.articleBlock{
-    margin-top: 3em;
-    margin-bottom: 3em;
-    color: var(--primary-dark-gray);
-}
-
-.articleItem{
-    border: 1em solid white;
-    text-align: justify;
-    overflow: hidden;
-}
-
-.articleItem h3 {
-    margin-top: 1em;
+.articles-page span:first-child{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    font-size: 0.9em;
+    margin-top: 2em;
     color: var(--primary-middle-gray);
 }
 
+#filArianeEchanger{
+    color: var(--primary-light-gray);
+}
+
+.articles-page h1{
+    margin-bottom: 0;
+    font-size: 3.4em;
+}
+
+.articles-page p{
+    margin-top: 0;
+    height: 4em;
+}
+
+img.articleImage{
+    height: 20em;
+}
+
+.articleItem{
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 16px rgba(0, 83, 94, 0.1), 11px 11px 64px rgba(0, 83, 94, 0.1);
+    text-align: justify;
+    overflow: hidden;
+    width: 49%;
+    margin-bottom: 1.5em;
+}
+
+.articleDescription{
+    margin: 0 2em 2em;
+}
+
+.articleItem h3 {
+    margin: 0;
+}
+
+.articleItem h4 {
+    color: var(--primary-middle-gray);
+}
+
+.articleDescription a {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 1em;
+    border-radius: 0.3em;
+    margin: 2em 0;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+}
 .articleItem a:hover, .articleItem a:active, .articleItem a:visited{
     text-decoration: none;
 }
@@ -27,12 +68,13 @@ img.articleImage{
 .articles-layout {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 @media only screen and (max-width: 576px) {
-    .articleBlock .rounded-card-white{
+    .rounded-card-white{
         padding: 0;
     }
 

@@ -11,10 +11,12 @@ function ArticleItem(props){
                 src={url}
                 alt={title}
             />
-            <h5>{date}</h5>
-            <h3>{title}</h3>
-            <p>{content}</p>
-            <Link to={link}>{textButton}</Link>
+            <div className="articleDescription">
+                <h4>{date}</h4>
+                <h3>{title}</h3>
+                <p>{content}</p>
+                <Link to={link}>{textButton}</Link>
+            </div>
         </div>
     );
 }

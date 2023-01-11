@@ -5,9 +5,9 @@ function Articles(props){
 
     return(
         <div className="articles-page">
-            <span><div>Echanger / </div><div>{namePage}</div></span>
+            <span><div id="filArianeEchanger">Echanger</div><div>/</div><div>{namePage}</div></span>
             <h1>{title}</h1>
-            <h3>{subtitle}</h3>
+            <p>{subtitle}</p>
             <div className="articles-layout">
                 {children}
             </div>
