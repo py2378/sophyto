@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 0,
+        "name": "jardin pédagogique",
+        "website": "https://www.ville-lamadeleine.fr/annuaires/equipements/espaces-verts/jardin-pedagogique"
+      },
+      "geometry": {
+        "coordinates": [
+          3.0770998468079256,
+          50.654234131922124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Ferme pédagogique Marcel Dhénin - Ville de Lille",
+        "website": "https://www.lille.fr/Nos-equipements/La-ferme-pedagogique-Marcel-Dhenin"
+      },
+      "geometry": {
+        "coordinates": [
+          3.080014185739458,
+          50.63805291054254
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Ferme Pédagogique De Lomme",
+        "website": "https://www.ville-lomme.fr/Culture-et-loisirs/S-aerer-a-Lomme/Ferme-educative"
+      },
+      "geometry": {
+        "coordinates": [
+          2.9896639318599227,
+          50.654941837442124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Ferme Saint Antoine / educational farm",
+        "website": "https://www.lafermesaintantoine.net/"
+      },
+      "geometry": {
+        "coordinates": [
+          2.956915977446755,
+          50.67165321525161
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "ferme du Héron",
+        "website": "https://www.villeneuvedascq.fr/ferme-du-heron-0"
+      },
+      "geometry": {
+        "coordinates": [
+          3.1786658166693087,
+          50.63901338114459
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
