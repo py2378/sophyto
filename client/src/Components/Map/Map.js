@@ -18,14 +18,31 @@ const Map = () => {
     function getColorWeather(weather) {
         switch (weather) {
             case "clear":
-                return "--primary-map-blue"
+                return "#CD3D9C66"
             case "mixed":
-                return "--primary-map-mauve"
+                return "#7C0D9866"
             case "stormy":
-                return "--primary-map-pink"
+                return "#0811DF4C"
         }
     }
+    const convertArrayToObject = (features) => {
+
+        let objList = []
+        for(let array of features){
+            for(let list of array.geometry.coordinates) {
+                let newObj = [];
+                for (let elem of list) {
+                    newObj.push({lat: elem[1], lng: elem[0]})
+                }
+                objList.push(newObj);
+            }
+        }
+        return objList;
+    };
+    const objList = convertArrayToObject(weatherZoneList.features);
     return (
+
+
         <MapContainer center={[50.6322,3.0639 ]} zoom={13} scrollWheelZoom={true} style= {{height:"400px",backgroundColor:"blue",marginTop:"0px", marginBottom:'0px'}}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -43,11 +60,10 @@ const Map = () => {
             {/*            {location.properties.libelle_point_vente} <br /> {location.properties.societe_producteur}*/}
             {/*        </Popup>*/}
             {/*    </Marker>))};*/}
-            {/*{weatherZoneList.features.map(weatherZone => (*/}
-            {/*    <Polygon key = {weatherZone.properties.id} pathOptions={{ color: getColorWeather(weatherZone.properties.weather), opacity:100 }} positions={weatherZone.geometry} >*/}
-            {/*    </Polygon>)*/}
-            {/*)}*/}
-            <GeoJSON key='test' data={weatherZoneList}/>
+            {weatherZoneList.features.map(weatherZone => (
+                <Polygon key = {weatherZone.properties.id}  color = {getColorWeather(weatherZone.properties.weather)}  positions={objList[weatherZone.properties.id]} >
+                </Polygon>)
+            )}
 
 
         </MapContainer>
