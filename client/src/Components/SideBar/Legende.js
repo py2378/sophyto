@@ -6,21 +6,21 @@ function Legende(){
             <ul>
                 <li>
                     <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="21.5" cy="21.5" r="21.5" fill="#0811DF" fill-opacity="0.3"/>
+                        <circle cx="21.5" cy="21.5" r="21.5" fill="#CD3D9C" fill-opacity="0.3"/>
                     </svg>
-                    <label>Mauvaises conditions de pulvérisation</label>
+                    <label>Pulvérisation incertaine</label>
                 </li>
                 <li>
                     <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="21.5" cy="21.5" r="21.5" fill="#7C0D98" fill-opacity="0.4"/>
                     </svg>
-                    <label>Moyennes conditions de pulvérisation</label>
+                    <label>Pulvérisation probable</label>
                 </li>
                 <li>
                     <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="21.5" cy="21.5" r="21.5" fill="#CD3D9C" fill-opacity="0.4"/>
+                        <circle cx="21.5" cy="21.5" r="21.5" fill="#0811DF" fill-opacity="0.4"/>
                     </svg>
-                    <label>Bonnes conditions de pulvéristaion</label>
+                    <label>Risques de pulvéristaion</label>
                 </li>
                 <li>
                     <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">

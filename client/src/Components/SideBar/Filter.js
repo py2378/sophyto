@@ -3,10 +3,10 @@ function Filter(){
     return(
         <ul id="sidebar-filter">
             <li>
-                <label><input type="checkbox" rel="acheterLocal" onChange="change();"/>Acheter local</label>
+                <label><input type="checkbox" rel="acheterLocal" onChange="change();" checked="True"/>Acheter local</label>
             </li>
             <li>
-                <label><input type="checkbox" rel="phyto" onChange="change();"/>Phyto</label>
+                <label><input type="checkbox" rel="phyto" onChange="change();" checked="True"/>Phyto</label>
             </li>
         </ul>
     );

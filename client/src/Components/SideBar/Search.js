@@ -3,7 +3,7 @@ function Search(){
     return(
         <form id="sidebar-search">
             <div>
-                <input type="search" placeholder="Rechercher" id="sidebar-search-input"/>
+                <input type="search" placeholder="Rechercher" id="sidebar-search-input" disabled/>
                 <button id="sidebar-search-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00343A"
                          className="bi bi-search" viewBox="0 0 16 16">
