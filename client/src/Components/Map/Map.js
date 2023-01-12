@@ -4,6 +4,7 @@ import {Icon} from "leaflet";
 import locationList from "../../Data/location.json";
 import farmList from "../../Data/farm.json";
 import weatherZoneList from "../../Data/weatherZone.json";
+import "./Map.css";
 
 const farmIcon = new Icon({
     iconUrl: './farm.svg',
@@ -43,7 +44,7 @@ const Map = () => {
     return (
 
 
-        <MapContainer center={[50.6322,3.0639 ]} zoom={13} scrollWheelZoom={true} style= {{height:"400px",backgroundColor:"blue",marginTop:"0px", marginBottom:'0px'}}>
+        <MapContainer id="mapContainer" className="bg-blue" center={[50.6322,3.0639 ]} zoom={13} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

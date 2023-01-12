@@ -3,7 +3,7 @@ import Map from "../Components/Map/Map"
 function Home(){
 
     return(
-        <div className="bg-blue">
+        <div id="homepage-container" className="bg-blue">
             <SideBar></SideBar>
             <Map></Map>
         </div>

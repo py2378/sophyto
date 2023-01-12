@@ -3,10 +3,10 @@
     --primary-light-orange: rgba(252, 171, 100, 0.25);
     --primary-medium-orange: rgba(252, 171, 100, 0.5);
     --primary-dark-blue: rgba(0, 52, 58, 0.5);
-    --primary-map-purple:#0811DF;
-    --primary-map-mauve: rgba(8, 17, 223, 0.3);
-    --primary-map-pink: rgba(124, 13, 152, 0.4);
-    --primary-map-green: rgba(205, 61, 156, 0.4);
+    --primary-map-purple: rgba(8, 17, 223, 0.3);
+    --primary-map-mauve: rgba(124, 13, 152, 0.4);
+    --primary-map-pink: rgba(205, 61, 156, 0.4);
+    --primary-map-green: #1FAB08;
     --primary-map-gray:#CDD4D9;
     --primary-light-gray:#BFC6C7;
     --primary-middle-gray:#7F8D8F;
@@ -59,6 +59,11 @@ ul{
             linear-gradient(0deg, rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.2)),
             radial-gradient(81.56% 246.19% at 92.87% 83.33%, #0F9EAF 0%, rgba(149, 212, 220, 0.557292) 47.89%, #0F9EAF 100%);
+}
+
+#homepage-container{
+    display: flex;
+    flex-direction: row;
 }
 
 .rounded-card-white{
