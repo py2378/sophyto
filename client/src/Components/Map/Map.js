@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer,Marker,Popup,Polygon,GeoJSON} from 'react-leaflet';
+import { MapContainer, TileLayer,Marker,Popup,Polygon} from 'react-leaflet';
 import {Icon} from "leaflet";
 import locationList from "../../Data/location.json";
 import farmList from "../../Data/farm.json";
@@ -26,14 +26,21 @@ const Map = () => {
                 return "#0811DF4C"
         }
     }
+    const filteredLocation = (features)=>{
+        for(let elem in features){
+            if(features[elem].properties.geo === undefined || features[elem].properties.geo === null){
+                delete features[elem];
+            }
+        }
+    }
     const convertArrayToObject = (features) => {
 
-        let objList = []
+        let objList = [];
         for(let array of features){
             for(let list of array.geometry.coordinates) {
                 let newObj = [];
                 for (let elem of list) {
-                    newObj.push({lat: elem[1], lng: elem[0]})
+                    newObj.push({lat: elem[1], lng: elem[0]});
                 }
                 objList.push(newObj);
             }
@@ -41,10 +48,12 @@ const Map = () => {
         return objList;
     };
     const objList = convertArrayToObject(weatherZoneList.features);
+    filteredLocation(locationList.features);
+
     return (
 
 
-        <MapContainer id="mapContainer" className="bg-blue" center={[50.6322,3.0639 ]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer id="mapContainer" className="bg-blue" center={[50.6322,3.0639 ]} zoom={11} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -55,14 +64,14 @@ const Map = () => {
                     {farm.properties.name} <br /> <a href={farm.properties.website}>site internet</a>
                 </Popup>
             </Marker>))};
-            {/*{locationList.features.map(location => (*/}
-            {/*    <Marker icon={locationIcon} key={location.properties.id_pdv} position={[location.geometry.coordinates[1], location.geometry.coordinates[0]]}>*/}
-            {/*        <Popup>*/}
-            {/*            {location.properties.libelle_point_vente} <br /> {location.properties.societe_producteur}*/}
-            {/*        </Popup>*/}
-            {/*    </Marker>))};*/}
+            {locationList.features.map(location => (
+                <Marker icon={locationIcon} key={location.properties.id_pdv} position={[location.properties.geo[0], location.properties.geo[1]]}>
+                    <Popup>
+                        {location.properties.libelle_point_vente} <br /> {location.properties.societe_producteur}
+                    </Popup>
+                </Marker>))};
             {weatherZoneList.features.map(weatherZone => (
-                <Polygon key = {weatherZone.properties.id}  color = {getColorWeather(weatherZone.properties.weather)}  positions={objList[weatherZone.properties.id]} >
+                <Polygon key = {weatherZone.properties.id} fillOpacity='0.85' color = {getColorWeather(weatherZone.properties.weather)}  positions={objList[weatherZone.properties.id]} >
                 </Polygon>)
             )}
 
