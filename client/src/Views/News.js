@@ -11,9 +11,9 @@ function News(){
         >
             <ArticleItem
                 date = "December 31, 2022"
-                content = "Près de 70 % des exploitants agricoles utilisent des adjuvants¹. Ce chiffre monte à presque 100 % pour les agriculteurs céréaliers. Leur usage s'est démocratisé au fil des années et ils sont aujourd’hui devenus presque incontournables. Mais quel est le rôle réel de l’adjuvantation ? Comment bien choisir son adjuvantation ? Est-ce qu’une bonne adjuvantation maximise les effets du traitement appliqué ?"
-                title = "Les secrets des adjuvants révélés : comment maximiser vos traitements grâce à l’adjuvantation ?"
-                url = "22_12_31.png"
+                content = "La betterave passe par plusieurs étapes de maturation avant de pouvoir être récoltée. Afin d'assurer la meilleure croissance possible, voici le guide de traitements à effectuer au cours des saisons "
+                title = "Cycle de traitement pour la culture de la betterave"
+                url = "22_12_31.jpg"
                 link = "#"
                 textButton = "Lire l'article"
             ></ArticleItem>

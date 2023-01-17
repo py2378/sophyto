@@ -17,16 +17,15 @@ const locationIcon = new Icon({
 })
 
 const Map = () => {
-    const [cookies, setCookie] = useCookies()
-    console.log(cookies.local);
+    const [cookies, setCookie] = useCookies();
     function getColorWeather(weather) {
         switch (weather) {
             case "clear":
-                return "#CD3D9C66"
+                return "#CD3D9C66";
             case "mixed":
-                return "#7C0D9866"
+                return "#7C0D9866";
             case "stormy":
-                return "#0811DF4C"
+                return "#0811DF4C";
         }
     }
     const filteredLocation = (features)=>{

@@ -9,8 +9,8 @@ function NavItem(props){
     return (
         <li className='nav-item'>
             <NavLink to={link}
-                     className={({ isactive }) => (isactive ? 'active' : 'inactive')}
-                     isactive={() => {
+                     className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+                     isActive={() => {
                          pathTosvg = path.split('_')[0] + "_orange.svg"
 
                      }}>
